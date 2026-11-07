@@ -37,7 +37,7 @@
       '<button type="button" class="lk-near">' + pin + 'In meiner Nähe</button>' +
       '<p class="lk-msg" aria-live="polite"></p></div>' +
       '<div class="lk-map"></div>' +
-      '<div class="lk-legend"><span><img src="' + BASE + 'img/siegel.png" alt="">Partnerschule</span><span><img src="' + BASE + 'img/eimer.png" alt="">Schule im Onboarding</span><span><i></i>Hier wird es rosa</span></div>' +
+      '<div class="lk-legend"><span><img src="' + BASE + 'img/siegel.png?v=' + V + '" alt="">Partnerschule</span><span><img src="' + BASE + 'img/eimer.png?v=' + V + '" alt="">Schule im Onboarding</span><span><i></i>Hier wird es rosa</span></div>' +
       '<p class="lk-stats"></p>' +
       '<div class="lk-list" aria-live="polite"></div>';
     root.innerHTML = ''; root.appendChild(wrap);
@@ -150,7 +150,7 @@
           h += '<h3>' + fmt(near.length) + ' Partnerschule' + (near.length === 1 ? '' : 'n') + ' im Umkreis von ' + RADIUS_KM + ' km' + (label ? ' um ' + esc(label) : '') + '</h3><div class="lk-items">';
           near.slice(0, 8).forEach(function (x) {
             var p = x.f.properties;
-            h += '<div class="lk-item"><img src="' + BASE + 'img/siegel.png" alt=""><div><strong>' + esc(p.n) + '</strong><span>' + (p.o ? esc(p.o) + ' · ' : '') + x.d.toFixed(1).replace('.', ',') + ' km</span><div class="lk-pop-a">' + routeLinks(p.n + (p.o ? ', ' + p.o : ''), x.f.geometry.coordinates) + '</div></div></div>';
+            h += '<div class="lk-item"><img src="' + BASE + 'img/siegel.png?v=' + V + '" alt=""><div><strong>' + esc(p.n) + '</strong><span>' + (p.o ? esc(p.o) + ' · ' : '') + x.d.toFixed(1).replace('.', ',') + ' km</span><div class="lk-pop-a">' + routeLinks(p.n + (p.o ? ', ' + p.o : ''), x.f.geometry.coordinates) + '</div></div></div>';
           });
           h += '</div>';
           if (near.length > 8) h += '<p style="margin-top:12px">Weitere Partnerschulen siehst du auf der Karte.</p>';
