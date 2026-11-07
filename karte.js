@@ -37,7 +37,7 @@
       '<button type="button" class="lk-near">' + pin + 'In meiner Nähe</button>' +
       '<p class="lk-msg" aria-live="polite"></p></div>' +
       '<div class="lk-map"></div>' +
-      '<div class="lk-legend"><span><img src="' + BASE + 'img/siegel.png?v=' + V + '" alt="">Partnerschule</span><span><img src="' + BASE + 'img/eimer.png?v=' + V + '" alt="">Schule im Onboarding</span><span><i></i>Hier wird es rosa</span></div>' +
+      '<div class="lk-legend"><span><img src="' + BASE + 'img/siegel.png?v=' + V + '" alt="">Partnerschule</span><span><b class="lk-dot"></b>Bald dabei</span><span><i></i>Deutschland wird rosa</span></div>' +
       '<p class="lk-stats"></p>' +
       '<div class="lk-list" aria-live="polite"></div>';
     root.innerHTML = ''; root.appendChild(wrap);
@@ -93,47 +93,54 @@
         }, firstSymbol);
         map.addLayer({ id: 'kreise-line', type: 'line', source: 'kreise', paint: { 'line-color': '#ffffff', 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.5, 10, 1.2], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.9, 10, 0.5] } }, firstSymbol);
 
-        Promise.all([img('siegel', BASE + 'img/siegel.png?v=' + V, 3), img('eimer', BASE + 'img/eimer.png?v=' + V, 2)]).then(function () {
+        img('siegel', BASE + 'img/siegel.png?v=' + V, 3).then(function () {
           map.addSource('reg', { type: 'geojson', data: reg, cluster: true, clusterRadius: 36, clusterMaxZoom: 10 });
-          map.addSource('partner', { type: 'geojson', data: partner, cluster: true, clusterRadius: 42, clusterMaxZoom: 10 });
+          map.addSource('partner', { type: 'geojson', data: partner, cluster: true, clusterRadius: 50, clusterMaxZoom: 10 });
 
-          map.addLayer({ id: 'reg-cluster', type: 'circle', source: 'reg', minzoom: 7.5, filter: ['has', 'point_count'],
-            paint: { 'circle-color': '#ec6f9e', 'circle-radius': ['step', ['get', 'point_count'], 13, 10, 17, 30, 21], 'circle-stroke-color': '#fff', 'circle-stroke-width': 2 } });
-          map.addLayer({ id: 'reg-count', type: 'symbol', source: 'reg', minzoom: 7.5, filter: ['has', 'point_count'],
-            layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-font': ['Noto Sans Bold'], 'text-size': 12 }, paint: { 'text-color': '#fff' } });
-          map.addLayer({ id: 'reg-point', type: 'symbol', source: 'reg', minzoom: 7.5, filter: ['!', ['has', 'point_count']],
-            layout: { 'icon-image': 'eimer', 'icon-size': ['interpolate', ['linear'], ['zoom'], 8, 0.62, 13, 0.85], 'icon-allow-overlap': true } });
+          // Bald dabei: rosa Dot, der sanft pulsiert (mehrere nah beieinander = größerer Dot, ohne Zahl)
+          var dotR = ['case', ['has', 'point_count'], ['step', ['get', 'point_count'], 7, 5, 8.5, 15, 10], 5.5];
+          map.addLayer({ id: 'reg-halo', type: 'circle', source: 'reg', minzoom: 7.5,
+            paint: { 'circle-color': '#ec6f9e', 'circle-radius': dotR, 'circle-opacity': 0.25, 'circle-blur': 0.2 } });
+          map.addLayer({ id: 'reg-dot', type: 'circle', source: 'reg', minzoom: 7.5,
+            paint: { 'circle-color': '#ec6f9e', 'circle-radius': dotR, 'circle-stroke-color': '#fff', 'circle-stroke-width': 2 } });
+          if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            (function pulse(t) {
+              if (!map.getLayer('reg-halo')) return;
+              var k = (t % 2200) / 2200;
+              map.setPaintProperty('reg-halo', 'circle-radius', ['+', dotR, 2 + 11 * k]);
+              map.setPaintProperty('reg-halo', 'circle-opacity', 0.45 * (1 - k));
+              requestAnimationFrame(pulse);
+            })(0);
+          } else {
+            map.setPaintProperty('reg-halo', 'circle-radius', ['+', dotR, 5]);
+          }
 
-          map.addLayer({ id: 'partner-cluster', type: 'circle', source: 'partner', filter: ['has', 'point_count'],
-            paint: { 'circle-color': '#f3ae33', 'circle-radius': ['step', ['get', 'point_count'], 15, 10, 19, 40, 24], 'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5 } });
-          map.addLayer({ id: 'partner-count', type: 'symbol', source: 'partner', filter: ['has', 'point_count'],
-            layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-allow-overlap': true }, paint: { 'text-color': '#204d64' } });
+          // Partnerschulen: Siegel, mehrere nah beieinander = größeres Siegel, ohne Zahl
+          map.addLayer({ id: 'partner-cluster', type: 'symbol', source: 'partner', filter: ['has', 'point_count'],
+            layout: { 'icon-image': 'siegel', 'icon-size': ['interpolate', ['linear'], ['zoom'], 5, ['step', ['get', 'point_count'], 0.5, 5, 0.62, 20, 0.75], 9, ['step', ['get', 'point_count'], 0.9, 5, 1.05, 20, 1.2]], 'icon-allow-overlap': true } });
           map.addLayer({ id: 'partner-point', type: 'symbol', source: 'partner', filter: ['!', ['has', 'point_count']],
-            layout: { 'icon-image': 'siegel', 'icon-size': ['interpolate', ['linear'], ['zoom'], 6, 0.72, 13, 0.95], 'icon-allow-overlap': true } });
+            layout: { 'icon-image': 'siegel', 'icon-size': ['interpolate', ['linear'], ['zoom'], 5, 0.5, 9, 0.8, 13, 0.95], 'icon-allow-overlap': true } });
 
-          ['partner-cluster', 'reg-cluster'].forEach(function (id) {
-            map.on('click', id, function (e) {
-              var f = e.features[0], src = id.split('-')[0];
-              map.getSource(src).getClusterExpansionZoom(f.properties.cluster_id).then(function (z) { map.easeTo({ center: f.geometry.coordinates, zoom: Math.min(z + 0.3, 14) }); });
-            });
-          });
+          function expand(src, f) { map.getSource(src).getClusterExpansionZoom(f.properties.cluster_id).then(function (z) { map.easeTo({ center: f.geometry.coordinates, zoom: Math.min(z + 0.3, 14) }); }); }
+          map.on('click', 'partner-cluster', function (e) { expand('partner', e.features[0]); });
           map.on('click', 'partner-point', function (e) {
             var f = e.features[0], p = f.properties, c = f.geometry.coordinates;
             new maplibregl.Popup({ offset: 18, maxWidth: '260px' }).setLngLat(c).setHTML(
               '<div class="lk-pop"><strong>' + esc(p.n) + '</strong><span>Partnerschule' + (p.o ? ' in ' + esc(p.o) : '') + '</span><div class="lk-pop-a">' + routeLinks(p.n + (p.o ? ', ' + p.o : ''), c) + '</div></div>').addTo(map);
           });
-          map.on('click', 'reg-point', function (e) {
+          map.on('click', 'reg-dot', function (e) {
             var f = e.features[0], p = f.properties;
+            if (p.cluster) { expand('reg', f); return; }
             new maplibregl.Popup({ offset: 16, maxWidth: '260px' }).setLngLat(f.geometry.coordinates).setHTML(
-              '<div class="lk-pop"><strong>Hier wird es rosa</strong><p>Im PLZ-Gebiet ' + esc(p.z) + ' sind Schulen im Onboarding. Mit Material aus dem Media Kit hilfst du mit, die Region zu aktivieren.</p><div class="lk-pop-a"><a href="/media-kit">Zum Media Kit</a><a href="/lifeteachus-champ">Champ werden</a></div></div>').addTo(map);
+              '<div class="lk-pop"><strong>Hier wird es rosa!</strong><p>Im PLZ-Gebiet ' + esc(p.z) + ' sind Schulen im Onboarding und bald dabei. Mit Material aus dem Media Kit hilfst du mit, die Region zu aktivieren.</p><div class="lk-pop-a"><a href="/media-kit">Zum Media Kit</a><a href="/lifeteachus-champ">Champ werden</a></div></div>').addTo(map);
           });
           map.on('click', 'kreise-fill', function (e) {
-            if (map.queryRenderedFeatures(e.point, { layers: ['partner-point', 'partner-cluster', 'reg-point', 'reg-cluster'] }).length) return;
+            if (map.queryRenderedFeatures(e.point, { layers: ['partner-point', 'partner-cluster', 'reg-dot'] }).length) return;
             var p = e.features[0].properties; if (!p.c) return;
             new maplibregl.Popup({ maxWidth: '240px' }).setLngLat(e.lngLat).setHTML(
               '<div class="lk-pop"><strong>' + esc(p.n) + '</strong><p>' + (p.p ? 'Hier sind wir schon mit Partnerschulen dabei' + (p.c > p.p ? ', und weitere Schulen sind im Onboarding.' : '.') : 'Hier sind Schulen im Onboarding. Die Region wird gerade rosa.') + '</p></div>').addTo(map);
           });
-          ['partner-point', 'partner-cluster', 'reg-point', 'reg-cluster'].forEach(function (id) {
+          ['partner-point', 'partner-cluster', 'reg-dot'].forEach(function (id) {
             map.on('mouseenter', id, function () { map.getCanvas().style.cursor = 'pointer'; });
             map.on('mouseleave', id, function () { map.getCanvas().style.cursor = ''; });
           });

@@ -3,7 +3,7 @@
 Die Karte auf [lifeteachus.org/ubersicht-partnerschulen](https://www.lifeteachus.org/ubersicht-partnerschulen).
 
 - **Partnerschulen** mit Vertrag erscheinen mit dem Partnerschulsiegel.
-- **Schulen im Onboarding** erscheinen als rosa Farbeimer auf dem PLZ-Mittelpunkt, ohne Namen.
+- **Schulen im Onboarding** („Bald dabei“) erscheinen als pulsierender rosa Punkt auf dem PLZ-Mittelpunkt, ohne Namen.
 - **Landkreise** werden rosa, je mehr Schulen dort dabei sind.
 - Suche nach Postleitzahl und „In meiner Nähe“ mit Liste der Partnerschulen im Umkreis von 25 km. Ist dort noch keine dabei, führt die Karte zum Media Kit, um die Region zu aktivieren.
 
