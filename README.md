@@ -14,6 +14,8 @@ Die Karte auf [lifeteachus.org/ubersicht-partnerschulen](https://www.lifeteachus
 <script src="https://ludwig-ltu.github.io/ltu-karte/karte.js" defer></script>
 ```
 
+Mit eigenem Ausschnitt (z. B. Kampagnenseiten): `<div id="ltu-karte" data-center="48.78, 9.18" data-zoom="9"></div>`
+
 ## Aufbau
 
 | Datei | Inhalt |

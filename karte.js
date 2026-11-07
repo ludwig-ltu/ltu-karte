@@ -53,9 +53,13 @@
       var orte = {}; schulen.features.forEach(function (f) { orte[f.properties.z || f.geometry.coordinates.join()] = 1; });
       wrap.querySelector('.lk-stats').textContent = 'LifeTeachUs ist schon an ' + fmt(Object.keys(orte).length) + ' Orten in Deutschland dabei.';
 
-      var map = new maplibregl.Map({
+      // Optionaler Ausschnitt, z. B. auf Kampagnenseiten: <div id="ltu-karte" data-center="48.78, 9.18" data-zoom="9">
+      var view = { bounds: [[5.9, 47.3], [15.0, 55.0]], fitBoundsOptions: { padding: mobile ? 8 : 24 } };
+      var cm = (root.getAttribute('data-center') || '').replace(/\s/g, '').match(/^(-?\d{1,2}(?:\.\d+)?),(-?\d{1,3}(?:\.\d+)?)$/);
+      if (cm) { var zz = parseFloat(root.getAttribute('data-zoom')); view = { center: [+cm[2], +cm[1]], zoom: (zz > 3 && zz < 19 ? zz : 9) - (mobile ? 0.7 : 0) }; }
+      var map = new maplibregl.Map(Object.assign(view, {
         container: wrap.querySelector('.lk-map'), style: STYLE,
-        bounds: [[5.9, 47.3], [15.0, 55.0]], fitBoundsOptions: { padding: mobile ? 8 : 24 }, minZoom: 4, maxZoom: 16,
+        minZoom: 4, maxZoom: 16,
         maxBounds: [[1, 44.5], [20, 57.5]], cooperativeGestures: true, attributionControl: false,
         locale: {
           'CooperativeGesturesHandler.WindowsHelpText': 'Strg + Scrollen zum Zoomen der Karte',
@@ -63,7 +67,7 @@
           'CooperativeGesturesHandler.MobileHelpText': 'Karte mit zwei Fingern bewegen',
           'NavigationControl.ZoomIn': 'Hineinzoomen', 'NavigationControl.ZoomOut': 'Herauszoomen', 'NavigationControl.ResetBearing': 'Norden'
         }
-      });
+      }));
       map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
       wrap.querySelector('.lk-map').appendChild(el('div', 'lk-attr', '© <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> · © <a href="https://www.openmaptiles.org" target="_blank" rel="noopener">OpenMapTiles</a> · © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · © GeoBasis-DE/BKG'));;
 
