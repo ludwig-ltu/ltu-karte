@@ -5,7 +5,7 @@
 (function () {
   var script = document.currentScript;
   var BASE = script ? script.src.replace(/[^\/]*$/, '') : './';
-  var ML = 'https://unpkg.com/maplibre-gl@4.7.1/dist/';
+  var ML = BASE + 'vendor/'; // MapLibre GL 4.7.1
   var STYLE = 'https://tiles.openfreemap.org/styles/positron';
   var RADIUS_KM = 25;
 
