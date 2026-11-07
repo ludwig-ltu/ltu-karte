@@ -53,7 +53,7 @@
 
       var map = new maplibregl.Map({
         container: wrap.querySelector('.lk-map'), style: STYLE,
-        center: [10.45, 51.15], zoom: mobile ? 4.5 : 5.3, minZoom: 4, maxZoom: 16,
+        bounds: [[5.9, 47.3], [15.0, 55.0]], fitBoundsOptions: { padding: mobile ? 8 : 24 }, minZoom: 4, maxZoom: 16,
         maxBounds: [[1, 44.5], [20, 57.5]], cooperativeGestures: true, attributionControl: { compact: true },
         locale: {
           'CooperativeGesturesHandler.WindowsHelpText': 'Strg + Scrollen zum Zoomen der Karte',
@@ -72,6 +72,7 @@
           if (l.type === 'background') map.setPaintProperty(l.id, 'background-color', '#fbf5f8');
           else if (l.type === 'fill' && /water/.test(l.id)) map.setPaintProperty(l.id, 'fill-color', '#dce9f0');
           else if (l.type === 'symbol' && /poi|housenumber|aeroway|transit/.test(l.id)) map.setLayoutProperty(l.id, 'visibility', 'none');
+          else if (l.type === 'symbol' && l.layout && /"name/.test(JSON.stringify(l.layout['text-field'] || ''))) map.setLayoutProperty(l.id, 'text-field', ['coalesce', ['get', 'name:de'], ['get', 'name']]);
           if (!firstSymbol && l.type === 'symbol') firstSymbol = l.id;
         });
 
