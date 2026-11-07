@@ -37,8 +37,7 @@
       '<button type="button" class="lk-near">' + pin + 'In meiner Nähe</button>' +
       '<p class="lk-msg" aria-live="polite"></p></div>' +
       '<div class="lk-map"></div>' +
-      '<div class="lk-legend"><span><img src="' + BASE + 'img/siegel.png?v=' + V + '" alt="">Partnerschule</span><span><b class="lk-dot"></b>Bald dabei</span><span><i></i>Deutschland wird rosa</span></div>' +
-      '<p class="lk-stats"></p>' +
+      '<div class="lk-legend"><span><img src="' + BASE + 'img/siegel.png?v=' + V + '" alt="">Partnerschule</span><span><b class="lk-dot"></b>Bald dabei</span><span class="lk-count"></span></div>' +
       '<div class="lk-list" aria-live="polite"></div>';
     root.innerHTML = ''; root.appendChild(wrap);
 
@@ -51,7 +50,7 @@
       var reg = { type: 'FeatureCollection', features: schulen.features.filter(function (f) { return f.properties.t === 'r'; }) };
       var m = schulen.meta || {};
       var orte = {}; schulen.features.forEach(function (f) { orte[f.properties.z || f.geometry.coordinates.join()] = 1; });
-      wrap.querySelector('.lk-stats').textContent = 'LifeTeachUs ist schon an ' + fmt(Object.keys(orte).length) + ' Orten in Deutschland dabei.';
+      wrap.querySelector('.lk-count').textContent = fmt(Object.keys(orte).length) + ' Orte sind schon rosa.';
 
       // Optionaler Ausschnitt, z. B. auf Kampagnenseiten: <div id="ltu-karte" data-center="48.78, 9.18" data-zoom="9">
       var view = { bounds: [[5.9, 47.3], [15.0, 55.0]], fitBoundsOptions: { padding: mobile ? 8 : 24 } };

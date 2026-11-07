@@ -19,6 +19,8 @@
 .lk-dot::after{content:"";position:absolute;inset:-2px;border-radius:50%;background:#ec6f9e;animation:lkpulse 2.2s ease-out infinite}
 @keyframes lkpulse{0%{transform:scale(1);opacity:.45}100%{transform:scale(2.6);opacity:0}}
 @media (prefers-reduced-motion:reduce){.lk-dot::after{animation:none;opacity:.25;transform:scale(1.8)}}
+.lk-count{font-weight:500}
+.lk-count:empty{display:none}
 .lk-legend i{display:inline-block;width:26px;height:16px;border-radius:5px;background:linear-gradient(90deg,#fbd3e1,#e35b8e)}
 .lk-stats{margin:6px 0 0;font-size:15px;opacity:.85}
 .lk-list{margin:22px 0 0}
