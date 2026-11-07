@@ -73,7 +73,7 @@
           else if (l.type === 'fill' && /water/.test(l.id)) map.setPaintProperty(l.id, 'fill-color', '#dce9f0');
           else if (l.type === 'symbol' && /poi|housenumber|aeroway|transit/.test(l.id)) map.setLayoutProperty(l.id, 'visibility', 'none');
           else if (l.type === 'symbol' && l.layout && /"name/.test(JSON.stringify(l.layout['text-field'] || ''))) map.setLayoutProperty(l.id, 'text-field', ['coalesce', ['get', 'name:de'], ['get', 'name']]);
-          if (!firstSymbol && l.type === 'symbol') firstSymbol = l.id;
+          if (!firstSymbol && (l.type === 'symbol' || /road|highway|transportation|tunnel|bridge|building/.test(l.id))) firstSymbol = l.id;
         });
 
         map.addSource('kreise', { type: 'geojson', data: kreise });
@@ -81,10 +81,10 @@
           id: 'kreise-fill', type: 'fill', source: 'kreise',
           paint: {
             'fill-color': ['step', ['get', 'c'], 'rgba(255,255,255,0)', 1, '#fbd3e1', 3, '#f7b5cc', 6, '#f297b7', 11, '#ec79a2', 26, '#e35b8e'],
-            'fill-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.8, 9, 0.4, 12, 0.15]
+            'fill-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.8, 8, 0.55, 10, 0.2, 12, 0.08]
           }
         }, firstSymbol);
-        map.addLayer({ id: 'kreise-line', type: 'line', source: 'kreise', paint: { 'line-color': '#ffffff', 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.5, 10, 1.2], 'line-opacity': 0.9 } }, firstSymbol);
+        map.addLayer({ id: 'kreise-line', type: 'line', source: 'kreise', paint: { 'line-color': '#ffffff', 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.5, 10, 1.2], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.9, 10, 0.5] } }, firstSymbol);
 
         Promise.all([img('siegel', BASE + 'img/siegel.png'), img('eimer', BASE + 'img/eimer.png')]).then(function () {
           map.addSource('reg', { type: 'geojson', data: reg, cluster: true, clusterRadius: 36, clusterMaxZoom: 10 });
