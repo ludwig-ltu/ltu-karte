@@ -36,7 +36,7 @@
       '<button type="button" class="lk-near">' + pin + 'In meiner Nähe</button>' +
       '<p class="lk-msg" aria-live="polite"></p></div>' +
       '<div class="lk-map"></div>' +
-      '<div class="lk-legend"><span><img src="' + BASE + 'img/siegel.png" alt="">Partnerschule</span><span><img src="' + BASE + 'img/eimer.png" alt="">Schule registriert</span><span><i></i>Hier wird es rosa</span></div>' +
+      '<div class="lk-legend"><span><img src="' + BASE + 'img/siegel.png" alt="">Partnerschule</span><span><img src="' + BASE + 'img/eimer.png" alt="">Schule im Onboarding</span><span><i></i>Hier wird es rosa</span></div>' +
       '<p class="lk-stats"></p>' +
       '<div class="lk-list" aria-live="polite"></div>';
     root.innerHTML = ''; root.appendChild(wrap);
@@ -49,12 +49,13 @@
       var partner = { type: 'FeatureCollection', features: schulen.features.filter(function (f) { return f.properties.t === 'p'; }) };
       var reg = { type: 'FeatureCollection', features: schulen.features.filter(function (f) { return f.properties.t === 'r'; }) };
       var m = schulen.meta || {};
-      wrap.querySelector('.lk-stats').textContent = fmt(m.partner || partner.features.length) + ' Partnerschulen und ' + fmt(reg.features.length) + ' Orte, an denen Schulen registriert sind';
+      var orte = {}; schulen.features.forEach(function (f) { orte[f.properties.z || f.geometry.coordinates.join()] = 1; });
+      wrap.querySelector('.lk-stats').textContent = 'LifeTeachUs ist schon an ' + fmt(Object.keys(orte).length) + ' Orten in Deutschland dabei.';
 
       var map = new maplibregl.Map({
         container: wrap.querySelector('.lk-map'), style: STYLE,
         bounds: [[5.9, 47.3], [15.0, 55.0]], fitBoundsOptions: { padding: mobile ? 8 : 24 }, minZoom: 4, maxZoom: 16,
-        maxBounds: [[1, 44.5], [20, 57.5]], cooperativeGestures: true, attributionControl: { compact: true },
+        maxBounds: [[1, 44.5], [20, 57.5]], cooperativeGestures: true, attributionControl: false,
         locale: {
           'CooperativeGesturesHandler.WindowsHelpText': 'Strg + Scrollen zum Zoomen der Karte',
           'CooperativeGesturesHandler.MacHelpText': '⌘ + Scrollen zum Zoomen der Karte',
@@ -63,15 +64,14 @@
         }
       });
       map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+      wrap.querySelector('.lk-map').appendChild(el('div', 'lk-attr', '© <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> · © <a href="https://www.openmaptiles.org" target="_blank" rel="noopener">OpenMapTiles</a> · © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · © GeoBasis-DE/BKG'));;
 
-      function img(name, url) { return map.loadImage(url).then(function (res) { if (!map.hasImage(name)) map.addImage(name, res.data, { pixelRatio: 2 }); }); }
+      function img(name, url, ratio) { return map.loadImage(url).then(function (res) { if (!map.hasImage(name)) map.addImage(name, res.data, { pixelRatio: ratio }); }); }
 
       map.on('load', function () {
-        var att = wrap.querySelector('.maplibregl-ctrl-attrib');
-        if (att) att.classList.remove('maplibregl-compact-show');
         var layers = map.getStyle().layers, firstSymbol;
         layers.forEach(function (l) {
-          if (l.type === 'background') map.setPaintProperty(l.id, 'background-color', '#fbf5f8');
+          if (l.type === 'background') map.setPaintProperty(l.id, 'background-color', '#fff8fb');
           else if (l.type === 'fill' && /water/.test(l.id)) map.setPaintProperty(l.id, 'fill-color', '#dce9f0');
           else if (l.type === 'symbol' && /poi|housenumber|aeroway|transit/.test(l.id)) map.setLayoutProperty(l.id, 'visibility', 'none');
           else if (l.type === 'symbol' && l.layout && /"name/.test(JSON.stringify(l.layout['text-field'] || ''))) map.setLayoutProperty(l.id, 'text-field', ['coalesce', ['get', 'name:de'], ['get', 'name']]);
@@ -88,7 +88,7 @@
         }, firstSymbol);
         map.addLayer({ id: 'kreise-line', type: 'line', source: 'kreise', paint: { 'line-color': '#ffffff', 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.5, 10, 1.2], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.9, 10, 0.5] } }, firstSymbol);
 
-        Promise.all([img('siegel', BASE + 'img/siegel.png'), img('eimer', BASE + 'img/eimer.png')]).then(function () {
+        Promise.all([img('siegel', BASE + 'img/siegel.png', 3), img('eimer', BASE + 'img/eimer.png', 2)]).then(function () {
           map.addSource('reg', { type: 'geojson', data: reg, cluster: true, clusterRadius: 36, clusterMaxZoom: 10 });
           map.addSource('partner', { type: 'geojson', data: partner, cluster: true, clusterRadius: 42, clusterMaxZoom: 10 });
 
@@ -104,7 +104,7 @@
           map.addLayer({ id: 'partner-count', type: 'symbol', source: 'partner', filter: ['has', 'point_count'],
             layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-allow-overlap': true }, paint: { 'text-color': '#204d64' } });
           map.addLayer({ id: 'partner-point', type: 'symbol', source: 'partner', filter: ['!', ['has', 'point_count']],
-            layout: { 'icon-image': 'siegel', 'icon-size': ['interpolate', ['linear'], ['zoom'], 6, 0.6, 13, 0.9], 'icon-allow-overlap': true } });
+            layout: { 'icon-image': 'siegel', 'icon-size': ['interpolate', ['linear'], ['zoom'], 6, 0.72, 13, 0.95], 'icon-allow-overlap': true } });
 
           ['partner-cluster', 'reg-cluster'].forEach(function (id) {
             map.on('click', id, function (e) {
@@ -120,13 +120,13 @@
           map.on('click', 'reg-point', function (e) {
             var f = e.features[0], p = f.properties;
             new maplibregl.Popup({ offset: 16, maxWidth: '260px' }).setLngLat(f.geometry.coordinates).setHTML(
-              '<div class="lk-pop"><strong>Hier wird es rosa</strong><p>Im PLZ-Gebiet ' + esc(p.z) + ' haben sich schon Schulen registriert. Hilf mit, dass sie bald dabei sind.</p><div class="lk-pop-a"><a href="/lifeteachus-champ">Champ werden</a><a href="/media-kit">Material im Media Kit</a></div></div>').addTo(map);
+              '<div class="lk-pop"><strong>Hier wird es rosa</strong><p>Im PLZ-Gebiet ' + esc(p.z) + ' sind Schulen im Onboarding. Mit Material aus dem Media Kit hilfst du mit, die Region zu aktivieren.</p><div class="lk-pop-a"><a href="/media-kit">Zum Media Kit</a><a href="/lifeteachus-champ">Champ werden</a></div></div>').addTo(map);
           });
           map.on('click', 'kreise-fill', function (e) {
             if (map.queryRenderedFeatures(e.point, { layers: ['partner-point', 'partner-cluster', 'reg-point', 'reg-cluster'] }).length) return;
             var p = e.features[0].properties; if (!p.c) return;
             new maplibregl.Popup({ maxWidth: '240px' }).setLngLat(e.lngLat).setHTML(
-              '<div class="lk-pop"><strong>' + esc(p.n) + '</strong><p>' + fmt(p.p) + ' Partnerschule' + (p.p === 1 ? '' : 'n') + (p.c - p.p > 0 ? ', dazu Registrierungen aus ' + fmt(p.c - p.p) + ' PLZ-Gebiet' + (p.c - p.p === 1 ? '' : 'en') : '') + '</p></div>').addTo(map);
+              '<div class="lk-pop"><strong>' + esc(p.n) + '</strong><p>' + (p.p ? 'Hier sind wir schon mit Partnerschulen dabei' + (p.c > p.p ? ', und weitere Schulen sind im Onboarding.' : '.') : 'Hier sind Schulen im Onboarding. Die Region wird gerade rosa.') + '</p></div>').addTo(map);
           });
           ['partner-point', 'partner-cluster', 'reg-point', 'reg-cluster'].forEach(function (id) {
             map.on('mouseenter', id, function () { map.getCanvas().style.cursor = 'pointer'; });
@@ -154,8 +154,11 @@
           h += '</div>';
           if (near.length > 8) h += '<p style="margin-top:12px">Weitere Partnerschulen siehst du auf der Karte.</p>';
         } else {
-          h += '<h3>Hier wird es bald rosa</h3><p>Im Umkreis von ' + RADIUS_KM + ' km' + (label ? ' um ' + esc(label) : '') + ' ist noch keine Partnerschule dabei' + (regN ? ', aber aus ' + fmt(regN) + ' PLZ-Gebiet' + (regN === 1 ? '' : 'en') + ' haben sich schon Schulen registriert' : '') + '. Deine LifeLesson kannst du jederzeit online per Video halten.</p>' +
-            '<div class="lk-cta"><a href="/partnerschulen">Schule vorschlagen</a><a href="/lifeteachus-champ">Champ werden</a><a href="/media-kit">Material im Media Kit</a></div>';
+          var um = label ? ' um ' + esc(label) : '';
+          h += regN
+            ? '<h3>Hier wird es bald rosa</h3><p>Im Umkreis von ' + RADIUS_KM + ' km' + um + ' sind schon Schulen im Onboarding. Jetzt dabei zu sein lohnt sich: Mit Material aus dem Media Kit hilfst du mit, die Region zu aktivieren. Deine LifeLesson kannst du jederzeit auch online per Video halten.</p>'
+            : '<h3>Mach deine Region rosa</h3><p>Im Umkreis von ' + RADIUS_KM + ' km' + um + ' kannst du LifeTeachUs als Erste oder Erster bekannt machen. Im Media Kit findest du Material, mit dem du Schulen in deiner Nähe ansprichst. Deine LifeLesson kannst du jederzeit auch online per Video halten.</p>';
+          h += '<div class="lk-cta"><a href="/media-kit">Zum Media Kit</a><a href="/lifeteachus-champ">Champ werden</a><a href="/partnerschulen">Schule vorschlagen</a></div>';
         }
         list.innerHTML = h;
       }
