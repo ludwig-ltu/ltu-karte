@@ -1,0 +1,440 @@
+P 01067 01069 01157 01239 01279 01445 01454 01705 01723 01728 01809 03042 03044 03048 03096 03130 03238 04103 04155 04347 04357 04420 04575 04600 04626 04643 04668 04720 04746 04821 04860 04910 06112 06114 06128 06449 06766 06901 07552 07570 07616 07778 07806 08060 08107 09126 09127 09130 09212 09217 09322 09353 09619 10115 10179 10247 10249 10317 10319 10365 10367 10409 10437 10551 10555 10559 10625 10627 10629 10713 10715 10717 10777 10961 10969 10971 10997 12043 12099 12101 12105 12157 12167 12169 12203 12205 12207 12277 12351 12359 12435 12439 12555 12623 12679 12683 12687 13055 13057 13086 13125 13156 13158 13189 13347 13355 13359 13409 13435 13465 13469 13503 13507 13509 13589 13591 13595 13627 14055 14129 14167 14469 14471 14480 14513 14532 14542 14612 14641 14797 14913 15234 15299 15537 15732 15806 15926 16227 16259 16341 16515 16761 16816 16831 16909 17033 17034 17192 17235 17491 18057 18069 18106 18146 18258 18273 18437 19089 19260 20095 20099 20144 20535 20537 21033 21035 21073 21077 21147 21218 21224 21244 21335 21354 21379 21465 21493 21614 21680 21682 21709 22043 22081 22083 22115 22117 22119 22145 22147 22159 22175 22179 22297 22301 22303 22307 22339 22359 22393 22397 22417 22455 22457 22459 22549 22559 22605 22765 22846 22848 22850 22851 23552 23562 23568 23611 23769 23821 23860 23879 23909 23966 24119 24145 24146 24149 24214 24226 24306 24321 24357 24536 24568 24576 24782 24860 24937 24943 24977 25335 25337 25379 25421 25462 25474 25560 25813 26122 26123 26129 26135 26160 26188 26219 26340 26382 26409 26532 26603 26670 26721 26789 27232 27356 27432 27476 27568 27570 27580 27639 27721 27749 27777 28195 28199 28215 28217 28237 28259 28277 28325 28329 28359 28755 28779 28832 28844 28870 29225 29614 29664 30167 30169 30173 30419 30519 30539 30625 30657 30659 30952 30966 30982 31135 31137 31157 31174 31275 31582 31785 32051 32108 32257 32289 32351 32423 32457 32469 32549 32584 32657 32689 32758 33014 33034 33098 33100 33102 33104 33154 33330 33378 33397 33428 33602 33611 33647 33659 33775 33790 34117 34132 34439 34516 35043 35274 35394 35435 35578 35630 36037 36039 36088 36129 36433 37073 37079 37081 37083 37115 37186 37269 37412 37441 37639 37688 38100 38120 38159 38165 38170 38228 38304 38364 38440 38442 38444 38446 38448 38518 38527 38554 38678 38855 39245 40211 40219 40223 40225 40227 40229 40235 40237 40468 40474 40489 40547 40589 40591 40593 40595 40597 40599 40625 40721 40724 40789 40822 40878 40880 40885 41065 41068 41179 41199 41236 41238 41363 41366 41460 41462 41464 41466 41468 41515 41539 41564 41747 41749 41751 41812 41844 42105 42111 42113 42275 42277 42283 42285 42349 42477 42499 42549 42551 42579 42651 42653 42657 42719 42799 42853 42855 42857 42859 42897 44135 44137 44139 44141 44145 44147 44149 44225 44265 44287 44357 44359 44388 44532 44536 44575 44623 44625 44627 44629 44649 44651 44653 44789 44791 44793 44795 44866 44892 44894 45127 45128 45130 45134 45138 45141 45147 45219 45239 45276 45277 45326 45329 45355 45356 45468 45481 45525 45549 45657 45661 45663 45665 45711 45721 45879 45881 45889 45894 45896 45964 45968 46045 46117 46145 46149 46236 46240 46284 46286 46325 46395 46397 46399 46446 46459 46483 46485 46509 46514 46535 47051 47139 47167 47169 47198 47226 47259 47269 47441 47443 47445 47475 47495 47506 47533 47574 47608 47665 47800 47803 47805 47807 47829 47839 47877 47918 48143 48147 48149 48151 48155 48159 48163 48165 48167 48231 48249 48268 48282 48317 48329 48346 48429 48431 48432 48455 48480 48493 48496 48565 48599 48607 48619 48624 48653 48683 48734 49074 49078 49080 49090 49356 49401 49434 49497 49509 49545 49565 49716 50126 50127 50170 50171 50259 50321 50354 50374 50389 50668 50672 50674 50676 50677 50679 50735 50737 50765 50767 50823 50825 50859 50933 50937 50969 50999 51061 51103 51105 51107 51109 51143 51145 51373 51377 51379 51427 51429 51467 51469 51503 51515 51519 51580 51643 51674 51702 51789 52062 52066 52068 52072 52074 52076 52146 52156 52223 52249 52349 52351 52353 52385 52477 52511 52525 52531 53115 53117 53119 53123 53125 53129 53173 53177 53225 53332 53359 53474 53577 53604 53757 53773 53783 53840 53842 53844 53859 53879 53881 54290 54550 54568 54673 55116 55129 55131 55218 55268 55411 55543 55596 56112 56332 56357 56428 56567 57072 57074 57076 57080 57223 57234 57299 57319 57368 57392 57413 57439 57462 57482 58089 58091 58095 58099 58119 58135 58239 58256 58313 58332 58456 58511 58515 58636 58642 58675 58706 58739 58762 58802 59065 59075 59077 59192 59227 59229 59269 59302 59348 59368 59379 59387 59423 59425 59457 59494 59510 59555 59557 59597 59755 59759 59821 59823 59872 59889 59939 60313 60320 60386 60437 60439 60486 60487 60488 60529 60596 61169 61231 61350 61462 63263 63303 63452 63477 63584 63739 63755 63768 63856 64283 64285 64289 64380 64546 64732 64760 64823 64846 65187 65189 65203 65239 65366 65510 65520 65760 65779 65929 66123 66125 66333 66625 66679 66687 66780 66869 67059 67112 67146 67227 67655 68161 68163 68165 68167 68169 68542 68789 69126 70184 70193 70195 70437 70469 70499 70569 70619 70794 70806 70825 71034 71065 71069 71134 71139 71229 71332 71364 71384 71540 71706 71723 72072 72108 72160 72202 72213 72336 72406 72581 72622 72760 72764 72793 73061 73079 73240 73430 73730 73760 73765 73770 74072 74076 74080 74354 74357 74366 74523 74564 74613 74632 74731 75173 75382 76133 76227 76275 76307 76448 76530 76532 76646 76669 76887 77652 77654 77694 77716 77933 77955 78098 78183 78224 78333 78467 78647 78727 79110 79111 79211 79252 79268 79379 79539 79540 79713 79843 79848 79856 80335 80337 80538 80686 80803 80933 80935 80995 80999 81243 81371 81377 81379 81671 81673 81735 81737 81739 81829 81929 82008 82110 82152 82205 82211 82294 82335 82515 83236 83308 83410 83549 85232 85276 85356 85435 85570 85622 85665 85716 86356 86368 86381 86529 86666 86720 86830 86836 87534 87700 88138 88239 88250 88422 88709 89129 89233 89312 89522 90403 90409 90419 90429 90441 90449 90478 90491 90579 90762 90763 91074 91080 91161 91207 91315 91522 91564 91572 91781 92318 92655 93051 93158 93309 94036 94051 94481 95466 95632 96047 96050 96194 97072 97084 97209 97340 97941 98617 99092 99096 99310 99423 99427 99439 99518 99867 99880 99894 5020 6900 7571 8566 8600 8912 08029 39050 10605
+S|bundtStift Schule Strausberg, Prötzeler Chaussee 7, 15344 Strausberg||
+S|Angelaschule Osnabrück, Bramstraße 41A, 49090 Osnabrück||
+S|Offene Schule Köln, Sürther Str. 199, 50999 Köln||
+S|Beethoven-Gymnasium, Adenauerallee 51-53, 53113 Bonn||
+S|Schule am Wilhelmsberg, Sandinostr. 8, 13055 Berlin||
+S|Grundschule am Heidekampgraben, Hänselstraße 14, 12437 Berlin||
+S|Gemeinschaftsschule Campus Cordis, Stauffenbergallee 8, 01099 Dresden||
+S|Städt. Berufsschule für MFA, PKA und TFA , Orleansstraße 46, 81667 München||
+S|Robert Bosch Gymnasium Gerlingen, Hasenbergstraße 16/2, 70839 Gerlingen||
+S|Georg-Büchner-Gymnasium, Saalburgstraße 11, 61118 Bad Vilbel||
+S|Evangelische Schule Pankow, Galenusstraße 60A, 13187 Berlin||
+S|Heliosschule – Inklusive Universitätsschule der Stadt Köln, Overbeckstraße 71, 50823 Köln||
+S|Friedrich-Hoffmann-Gemeinschaftsschule, Hoffmannstraße 4+7, 72770 Reutlingen||
+S|Marion-Dönhoff-Realschule plus, Pirzenthaler Str. 46, 57537 Wissen||
+S|Andreas-Gymnasium Berlin, Koppenstraße 76, 10243 Berlin||
+S|Robert Blum Gymnasium, Kolonnenstraße 21, 10829 Berlin||
+S|Wilhelm-von-Humboldt Gemeinschaftsschule, Erich-Weinert-Straße 70, 10439 Berlin||
+S|Gesamtschule Dellbrücker Mauspfad, Dellbrücker Mauspfad 200, 51069 Köln||
+S|Stadtteilschule Altona, Recha-Ellern-Weg 1, 22765 Hamburg||
+S|Realschule Bedburg, Goethestraße 1, 50181 Bedburg||
+S|Herzog-Christoph-Schule, Nägelestraße 17, 71540 Murrhardt||
+S|Asam-Gymnasium München, Schlierseestraße 20, 81539 München||
+S|JOBLINGE Ulm, Olgastraße 152, 89073 Ulm||
+S|Städt. Sophie-Scholl-Gymnasium, Karl-Theodor-Straße 92, 80796 München||
+S|Städt. Elly-Heuss-Realschule, Ungsteiner Str. 46, 81539 München||
+S|Erich Kästner Schule, Hermelinweg 10, 22159 Hamburg||
+S|Musikgymnasium C.Ph.E.Bach, Rheinsberger Straße 4-5, 10115 Berlin||
+S|Albert-Schäffle-Schule, Albert-Schäffle-Straße 1, 72622 Nürtingen||
+S|Nymphenburger Schulen München, Sadelerstraße 10, 80638 München||
+S|Dathe-Gymnasium, Helsingforser Str. 11-13, 10243 Berlin||
+S|Franz-Carl-Achard-Grundschule, Adolfstraße 25, 12621 Berlin||
+S|EmiLe Montessorischulverein München Südost e.V., Arastraße 2, 85579 Neubiberg||
+S|Oberstufenzentrum für Kommunikations-, Informations- und Medientechnik, Osloer Str. 23-26, 13359 Berlin||
+S|Gesamtschule Königs Wusterhausen, Schulstraße 3, 15713 Königs Wusterhausen||
+S|Prignitz-Schule, Pöppelmannstraße 2, 12157 Berlin||
+S|Müritz - Schulcampus Rechlin, Neuer Markt 28, 17248 Rechlin||
+S|Lessing-Gymnasium, Ellerstraße 84-94, 40227 Düsseldorf||
+S|Voltaireschule Potsdam, Lindenstraße 32-33, 14467 Potsdam||
+S|Struensee Gymnasium, Wohlwillstraße 48, 20359 Hamburg||
+S|Städt. Wilhelm-Röntgen-Realschule, Klabundstraße 8, 81737 München||
+S|Gesamtschule Emschertal Duisburg, Albert-Einstein-Str. 11, 47167 Duisburg||
+S|Willy-Brandt-Schule, Grüntaler Straße 5, 13357 Berlin||
+S|Oberschule Rangsdorf, Großmachnower Str. 4, 15834 Rangsdorf||
+S|Gymnasium Wilhelm-Raabe-Schule, Feldstraße 30, 21335 Lüneburg||
+S|Corrie-ten-Boom-Schule, Christburger Str. 14b, 10405 Berlin||
+S|145. Oberschule Dresden, Gehestraße 2, 01127 Dresden||
+S|Corrie-ten-Boom-Schule, Christburger Str. 14b, 10405 Berlin||
+S|Comenius-Schule, Gieselerstraße 4, 10713 Berlin||
+S|Zille-Grundschule, Boxhagener Str. 45, 10245 Berlin||
+S|Otto-Modersohn- Grundschule, Niemannstraße 3, 10245 Berlin||
+S|Dr.-Georg-August-Zinn-Schule, Schwimmbadweg 30, 34281 Gudensberg||
+S|ISS Gemeinschaftsschule Mahlsdorf, Landsberger Str. 178, 12623 Berlin||
+S|Wilhelm-Raabe-Schule - Feldstr. 30, 21335 Lüneburg||
+S|Bugenhagenschule Blankenese, Oesterleystraße 22, 22587 Hamburg||
+S|Grund- und Mittelschule Diespeck, Schulstraße 12, 91456 Diespeck||
+S|Jenaplan-Schule-Würzburg, Wallgasse 10, 97070 Würzburg||
+S|Albert-Schweitzer-Gymnasium, Kandelstraße 47, 79194 Gundelfingen||
+S|Schule auf dem lichten Berg, Atzpodienstraße 19, 10365 Berlin||
+S|Orankesee-Schule, Konrad-Wolf-Straße 11, 13055 Berlin||
+S|Grundschule Kempten-Nord, Lotterbergstraße 31, 87439 Kempten||
+S|Adorno-Gymnasium, Miquelallee 160, 60323 Frankfurt am Main||
+S|Gemeinschaftsschule Hassee, Rendsburger Landstraße 115, 24113 Kiel||
+S|Albert-Schweitzer-Gemeinschaftsschule, Kandelstraße 47, 79194 Gundelfingen||
+S|Grundschule am Gruscheweg, Gruscheweg 52, 15366 Neuenhagen bei Berlin||
+S|Stadtteilschule Niendorf, Paul-Sorge-Straße 133-135, 22455 Hamburg||
+S|Freudberg Gemeinschaftsschule, Bundesallee 35, 10717 Berlin||
+S|Schule auf der Uhlenhorst, Winterhuder Weg 126, 22085 Hamburg||
+S|Phönix Grundschule, Wartiner Straße 6, 13057 Berlin||
+S|Carl-Friedrich-von-Siemens Gymnasium, Jungfernheideweg 79, 13629 Berlin||
+S|Kant-Gymnasium Spandau, Bismarckstraße 54, 13585 Berlin||
+S|Otto-Unverdorben-Oberschule, Nordhag 11, 15936 Dahme/Mark||
+S|Robinson Grundschule, Wönnichstraße 7, 10317 Berlin||
+S|Maria-Leo-Grundschule, Conrad-Blenkle-Straße 20, 10407 Berlin||
+S|Lily Braun Gymnasium, 	Münsingerstraße 2, 13597 Berlin||
+S|Grundschule am Vierrutenberg, Am Freibad 2, 13469 Berlin||
+S|Bettina von Arnim Gymnasium, 	Haberlandstraße 14, 41539 Dormagen||
+S|Michael-Ende-Grundschule, Lotte-Loebinger-Straße 1a, 14482 Potsdam||
+S|Barnim Gymnasium Bernau, Hans-Wittwer-Straße 20, 16321 Bernau bei Berlin||
+S|Schule im Gutspark, Josef-Orlopp-Straße 20, 10367 Berlin||
+S|Carl-Schurz-Grundschule, Hakenfelder Str. 32, 13587 Berlin||
+S|Carl-Theodor-Schule, Goethestraße 19a, 68723 Schwetzingen||
+S|Margarethe-von-Witzleben-Schule, Palisadenstraße 76, 10243 Berlin||
+S|Hunsrück-Schule, Manteuffelstraße 79, 10999 Berlin||
+S|Gymnasium Oberalster, Alsterredder 26, 22395 Hamburg||
+S|Grundschule am Amalienhof, Weinmeisterhornweg 122, 13593 Berlin||
+S|Theresia-Gerhardinger-Gymnasium, Blumenstraße 26, 80331 München||11.57280,48.13332
+S|Staatliche Regelschule "G. E. Lessing", Dr.-Scheube-Straße 4, 07973 Greiz||
+S|Ludwig-Frohnhäuser-Schule, Frohnhäuserstraße 11, 74206 Bad Wimpfen||
+S|Liebmann-Schule, Friedrichstr. 13, 10969 Berlin||
+S|Kulturwerkschule, Luboldtstraße 15, 01324 Dresden||
+S|Erich Kästner Mittelschule, Centrum 5, 92353 Postbauer-Heng||
+S|Friedrich-Schiller-Gymnasium, Alleenstraße 16, 71638 Ludwigsburg||
+S|Dalton-Gymnasium, Voltaireweg 8, 14469 Potsdam||
+S|Humboldt Gymnasium Potsdam, Heinrich-Mann-Allee 104C, 14473 Potsdam||
+S|Anita-Lichtenstein-Gesamtschule, Pestalozzistraße 27, 52511 Geilenkirchen||
+S|Johannes-Brahms-Schule,  Fahltskamp 36, 25421 Pinneberg||
+S|Hermann-Scheer-Schule (OSZ Wirtschaft), Helmholtzstraße 37, 12459 Berlin||
+S|Disibod Realschule Plus, Münchwiesen 41, 55566 Bad Sobernheim||
+S|Immanuel-Grundschule Christburg-Campus, Stadtrandstraße 465, 13589 Berlin||
+S|Semper Schulen Media, Antonstraße 19—21, 01097 Dresden||
+S|RBZ am Königsweg, Königsweg 80, 24114 Kiel||
+S|Louise-Henriette-Gymnasium Oranienburg, Dr.-Kurt-Schumacher-Str. 8, 16515 Oranienburg||
+S|Lindenschule Buer, Hilgensele 43/44, 49328 Melle||
+S|Schule Marmstorf, Ernst-Bergeest-Weg 54, 21077 Hamburg||
+S|Obersee-Schule, Roedernstraße 69-71, 13053 Berlin||
+S|Freie Schule Müncheberg, 	Tempelberger Weg 9, 15374 Müncheberg||
+S|IGS Johann Wolfgang von Goethe, Bei der Klosterkirche 8, 23966 Wismar||
+S|Hölty-Gymnasium, Versonstraße 2, 29313 Hambühren||
+S|Kooperationsschule Chemnitz, Brauhausstraße 16, 09111 Chemnitz||
+S|Katholische Schule Bernhard Lichtenberg, 	Hohenzollernring 156, 13585 Berlin||13.19321,52.54282
+S|Albert-von-Graefe-Schule, Graefestraße 85, 10967 Berlin||
+S|Christliche Gesamtschule Bleibergquelle, Bleibergstraße 133, 42551 Velbert||
+S|Friedrich-Junge Gemeinschaftssschule, Gellertstraße 46, 24114 Kiel||
+S|Martinus-Schule Weißliliengasse, Weißliliengasse 11, 55116 Mainz||
+S|May-Ayim-Schule, Storkower Str. 209b, 10369 Berlin||
+S|Schule an der Alten Leine, Am Schloonberg 11, 29690 Schwarmstedt||
+S|Friedensschule Osnabrück, Hakenstraße 13, 49074 Osnabrück||
+S|Lausitzer Sportschule Cottbus, Linnéstraße 1-4, 03050 Cottbus||
+S|Schule Knauerstraße, Knauerstraße 22, 20249 Hamburg||
+S|Gymnasium Antonianum Vechta, Willohstraße 19, 49377 Vechta||
+S|Albert-Schweitzer-Gymnasium Gundelfingen, Kandelstraße 47, 79194 Gundelfingen||7.87116,48.04100
+S|Schalker Gymnasium, Liboriusstraße 103, 45881 Gelsenkirchen||
+S|Gustav-Heinemann-Oberschule, Tirschenreuther Ring 48, 12279 Berlin||
+S|Silcherschule Eislingen, Schulstraße 6-8, 73054 Eislingen/Fils||
+S|Albert-Schweitzer-Schule Aue, Robert-Koch-Straße 30, 08280 Aue-Bad Schlema||
+S|Rupert-Neß-Gymnasium, Jahnstraße 25, 88239 Wangen im Allgäu||
+S|Galilei Grundschule, Friedrichstraße 13, 10969 Berlin||13.39141,52.50178
+S|Gustav-Stresemann-Wirtschaftsschule,  Hechtsheimer Str. 31, 55131 Mainz||
+S|Wildbienen Grundschule, Keplerstraße 10, 12459 Berlin||
+S|Reichenberg Schule, Beerfurther Str. 24, 64385 Reichelsheim (Odenwald)||
+S|Emanuel-Lasker-Schule, Corinthstraße 5, 10245 Berlin||
+S|Humboldt-Gymnasium Eichwalde, Bahnhofstraße 79, 15732 Eichwalde||
+S|Schickhardt Gymnasium Stuttgart, Schickhardtstraße 26, 70199 Stuttgart||
+S|Ferdinand-Porsche-Schule, Nußdorfer Str. 34, 71287 Weissach||
+S|Grundschule am Insulaner, Hanstedter Weg 11 / 15, 12169 Berlin||
+S|A&A Ausbildung und Arbeit Plus GmbH,  Salzstraße 1, 21335 Lüneburg||
+S|Georg-von-Giesche-Schule, Hohenstaufenstraße 47-48, 10779 Berlin||
+S|Paul-Natorp-Gymnasium, Goßlerstraße 13, 12161 Berlin||
+S|Schule an der Haveldüne, Jaczostraße 53/67, 13595 Berlin||
+S|Mathias-Bauer-Schule, Brüder-Grimm-Straße 4, 34537 Bad Wildungen||
+S|Johann-Comenius-Oberschule, Leharstraße 12, 49661 Cloppenburg||
+S|Bertolt-Brecht-Gymnasium Dresden, Terrassenufer 15, 01069 Dresden||
+S|Modellschule Marille, Nahmitzer Damm 12, 12277 Berlin||
+S|Berufskolleg Kohlstraße, Kohlstraße 11, 42109 Wuppertal||
+S|Astrid-Lindgren-Schule, Siskesbach 2, 48231 Warendorf||
+S|Philipp-Reis-Schule Friedrichsdorf,  Färberstraße 10, 61381 Friedrichsdorf, Hessen||
+S|Grundschule Südlengerheide, Max-Planck-Str. 58, 32257 Bünde||
+S|Europaschule Langerwehe, Josef-Schwarz-Straße 16, 52379 Langerwehe||
+S|Elisabeth-Gymnasium, Murmansker Str. 14, 06130 Halle (Saale)||
+S|Alfred Krupp Schule, Margaretenstraße 40, 45144 Essen||
+S|Evangelisches Schulzentrum Leipzig, Schletterstraße 7, 04107 Leipzig, Sachsen||
+S|Deutsch-Skandinavische Gemeinschaftsschule, Machonstraße 54, 12105 Berlin||
+S|Oranienschule, Oranienstraße 7, 65185 Wiesbaden||
+S|Gustav-Stresemann-Wirtschaftsschule, Hechtsheimer Str. 31, 55131 Mainz||
+S|Spreewald Schule Lübben, Am Kleinen Hain 30, 15907 Lübben (Spreewald)||
+S|Drei-Burgen-Schule, untere Birkenallee 21, 34587 Felsberg||
+S|Einstein Gymnasium, Fürst-Bentheim-Straße 60, 33378 Rheda-Wiedenbrück||
+S|Privatgymnasium Dr. Florian Überreiter, Pariser Str. 30, 81667 München||
+S|Theodor-Heuss-Gymnasium, Grotefendstraße 1, 37075 Göttingen||
+S|Goethe-Gymnasium Frankfurt, Friedrich-Ebert-Anlage 22, 60325 Frankfurt am Main||
+S|Marie-Beschütz-Schule, Erikastraße 41, 20251 Hamburg||
+S|Leo-Sternberg-Schule, Im Ansper, 65549 Limburg an der Lahn||
+S|St. Angela-Schule, Gerichtstraße 19, 61462 Königstein im Taunus||
+S|Reginhard-Grundschule, Letteallee 39, 13409 Berlin||
+S|CJD Berlin-Brandenburg, Sickingenstraße 20-28, 10553 Berlin||
+S|Jengerschule GMS, Albertstraße 13, 79238 Ehrenkirchen||
+S|Gesamtschule Petershagen,  Eggersdorfer Str. 91 - 95, 15370 Petershagen/Eggersdorf||
+S|Grundschule Kork, Oberdorfstraße 6, 77694 Kehl||
+S|Kuhlenkampschule, Am Schäferfeld 20A, 32425 Minden||
+S|Grundschule Wandlitz, An d. Sporthalle 5, 16348 Wandlitz||
+S|Rosa-Luxemburg-Gymnasium, Kissingenstr. 12, 13189 Berlin||
+S|Realschule Karlsbad, Am Schelmenbusch 12, 76307 Karlsbad||
+S|Realschule Kollnau, Kollnauer Str. 23, 79183 Waldkirch||
+S|Sternberg Grundschule, Mettestraße 8, 10825 Berlin||
+S|Integrierte Sekundarschule Biesdorf,  Erich-Kästner-Straße 52, 12619 Berlin||
+S|Pirckheimer Gymnasium,  Gibitzenhofstraße 151, 90443 Nürnberg||
+S|Albert-Schweitzer-Schule Krefeld, Lewerentzstraße 136, 47798 Krefeld||
+S|Berufliche Schule Riedlingen, Zwiefalter Str. 50, 88499 Riedlingen||
+S|Gesamtschule Höhscheid, Kanalstraße 20, 42657 Solingen||
+S|Drais-Gemeinschaftsschule,  Tristanstraße 1, 76185 Karlsruhe||
+S|Hellbergschule,  Hellbergstraße 4, 79541 Lörrach||
+S|Selma-Lagerlöf-Grundschule , Wörlitzer Straße 31, 12689 Berlin||
+S|Klettgau-Gymnasium Tiengen,  Sudetenstraße 1, 79761 Waldshut-Tiengen||
+S|Klettgau-Gymnasium Tiengen  ,Sudetenstraße 1, 79761 Waldshut-Tiengen||
+S|Michael-Beheim-Schule,  Michael-Beheim-Straße 50, 74182 Obersulm||
+S|Freie Montessorischule Huckepack,  Glashütter Straße 10, 01309 Dresden||
+S|Albert-Einstein-Gymnasium Ulm,  Buchauer Str. 9, 89079 Ulm||
+S|Eberhard-Ludwigs-Gymnasium,  Ludwigstraße 111, 70197 Stuttgart||
+S|Otto-Hahn-Schule, Kastanienallee 69, 63454 Hanau||
+S|Otto-Kühne-Schule Godesberg,  Otto-Kühne-Platz 1, 53173 Bonn||
+S|Sieben Brücken Schule, Ottostraße 1, 50859 Köln||
+S|Privatschulen Dr. Kalscheuer Traunstein, Weckerlestr. 17, 83278 Traunstein||
+S|Jacobistraße 37, 61348 Bad Homburg vor der Höhe||
+S|Espenstraße 3, 01169 Dresden||
+S|Goldbergstraße 58-60, 45894 Gelsenkirchen||
+S|Maria-Ward-Gymnasium Nürnberg, Keßlerpl. 2, 90489 Nürnberg||
+S|RBZ am Schützenpark, Westring 100, 24114 Kiel||
+S|Hardtberg-Gymnasium Bonn, Gaußstraße 1, 53125 Bonn||
+S|Jakob-Friedrich-Schöllkopf-Schule, Boschstraße 28, 73230 Kirchheim unter Teck||9.43626,48.64853
+S|Privates Gymansium Esslingen, Rotenackerstraße 71, 73732 Esslingen am Neckar||
+S|Musterschule Frankfurt, Oberweg 5-9, 60318 Frankfurt am Main||
+S|Oberschule Rehden, Schulstraße 16, 49453 Rehden||
+S|Gertrud-Bäumer-Realschule, Rotthauser Str. 2-4, 45879 Gelsenkirchen||
+S|Herzog-Ernst-Gymnasium Uelzen, Albertstraße 41, 29525 Uelzen||
+S|Theresienschule Berlin, Behaimstraße 29, 13086 Berlin||
+S|Scharmützelsee-Grundschule, Hohenstaufenstraße 49, 10779 Berlin||
+S|Steinbergschule Hofheim, Altenhainer Str. 34, 65719 Hofheim am Taunus||
+S|Evangelische Grundschule Wilmersdorf, Brandenburgische Str. 51, 10707 Berlin||
+S|Hauptschule an der Grillostraße, Grillostraße 111, 45881 Gelsenkirchen||
+S|Heinrich-Mann-Gymnasium, Fühlinger Weg 4, 50765 Köln||
+S|Leibniz-Gymnasium Remscheid, Lockfinker Str. 23, 42899 Remscheid||
+S|Carl-von-Ossietzky-Gymnasium, Görschstraße 42/44, 13187 Berlin||
+S|Berufliches Schulzentrum Waldkirch, Merklinstraße 21, 79183 Waldkirch||
+S|Ricarda-Huch-Gymnasium in Gelsenkirchen, Schultestraße 50, 45888 Gelsenkirchen||
+S|Robert-Jungk-Oberschule, Sächsische Str. 58, 10707 Berlin||
+S|Edith-Stein-Schule, Pater-Setzer-Platz 1, 85716 Unterschleißheim||
+S|Erasmus-Gymnasium Denzlingen, Stuttgarter Str. 15, 79211 Denzlingen||
+S|Questenberg Grundschule Meißen, Questenberger Weg 9, 01662 Meißen||
+S|Emil-Schumacher-Schule, Siemensstraße 10, 58089 Hagen||
+S|Grundschule Am Kiefernwald Wildenbruch, Potsdamer Allee 11, 14552 Michendorf||
+S|Heinrich-Heine-Schule Büdelsdorf, Neue Dorfstraße 67, 24782 Büdelsdorf||
+S|Gesamtschule Am Schilfhof, Schilfhof 23/25, 14478 Potsdam||
+S|Gymnasium Neubiberg, Cramer-Klett-Straße 10, 85579 Neubiberg||
+S|Freies Christliches Gymnasium Düsseldorf, Buchenstraße 1, 40599 Düsseldorf||
+S|Grundschule "Martin Andersen Nexö", Frankfurter Str. 74, 15518 Briesen (Mark)||
+S|Astrid-Lindgren-Grundschule, Südekumzeile 5, 13591 Berlin||
+S|Integrierte Gesamtschule Querum, Essener Str. 85, 38108 Braunschweig||
+S|Sälzer-Sekundarschule der Wallfahrtsstadt Werl,  Kucklermühlenweg 43, 59457 Werl, Nordrhein-Westfalen||
+S|Agricolagymnasium Hohenmölsen, Agricolaweg 1, 06679 Hohenmölsen||
+S|Staatliche Wirtschaftsschule Bad Neustadt, Franz-Marschall-Straße 14, 97616 Bad Neustadt an der Saale||
+S|Grundschule im Hofgarten, Danziger Str. 50, 10435 Berlin||
+S|Josef-Hofmiller-Gymnasium, Vimystraße 14, 85354 Freising||
+S|Gymnasium Hohenlimburg||7.57064,51.36294
+S|Realschule||9.45753,48.71204
+S|Golden-Bühl-Schule||8.44891,48.07242
+S|IB Berufliche Schulen Asperg||9.14392,48.90476
+S|Wirtemberg-Gymnasium||9.24909,48.77712
+S|Nelson-Mandela-Gesamtschule||7.12738,50.97947
+S|Alexander-Fleming-Schule||9.18415,48.79896
+S|Integrierte Gesamtschule An den Rheinauen||8.36830,49.85226
+S|Heinrich-Böll-Schule||8.91456,50.18860
+S|Siebenpfeiffer-Gymnasium Kusel||7.39127,49.54331
+S|Buigen-Gymnasium||10.17244,48.62080
+S|Gyula Trebitsch Schule Tonndorf||10.12187,53.59461
+S|Toulouse-Lautrec-Schule für Körperbehinderte||13.30390,52.58901
+S|Tesla-Gemeinschaftsschule||13.44574,52.52954
+S|Karla-Raveh-Gesamtschule||8.91290,52.03528
+S|Bischöfliches Maria-Montessori-Schulzentrum Leipzig||12.30015,51.32120
+S|Oberschule Bunde||7.27179,53.18701
+S|Friedensburg-Oberschule||13.32083,52.50910
+S|Franz-Dinnendahl-Realschule||7.06849,51.45534
+S|Otto-von-Guericke-Oberschule||13.30506,52.49265
+S|Gymnasium Waldkraiburg||12.41163,48.20414
+S|Ernst-Immel-Realschule||7.13685,51.66213
+S|Max-Planck-Gymnasium||7.06588,51.58071
+S|Realschule Ostheim||9.20318,48.78743
+S|Heide-Schule||13.54383,52.43852
+S|Hauptschule Schwalbenstrasse||7.03943,51.55373
+S|Erich-Kästner-Realschule||9.27150,48.97175
+S|Käthe-Kollwitz-Gymnasium||13.42270,52.54580
+S|Käthe-Kollwitz-Gymnasium||13.42270,52.54580
+S|Kurpfalz Gymnasium G9 und Realschule Mannheim||8.47016,49.48379
+S|Frankenwald-Gymnasium||11.34269,50.23559
+S|Reinhold-Burger-Oberschule||13.40213,52.56832
+S|Frankenwald-Gymnasium||11.34269,50.23559
+S|Freie element-i Grundschule im Bildungshaus Karlsruhe||8.43756,49.02418
+S|Integrierte Gesamtschule Einbeck||9.87387,51.82729
+S|Freie Waldorfschule Bargteheide||10.24476,53.72476
+S|Gesamtschule Erle||7.09834,51.55936
+S|Sekundarschule Hassel||7.05658,51.60903
+S|Aktive Schule Köln||6.87826,50.95066
+S|Alexander-von-Humboldt-Gymnasium, Neuss||6.68952,51.18224
+S|Berufliche Schule 7||11.09808,49.46928
+S|BBS Verden||9.24101,52.95286
+S|OSK Offene Schule Köln gGmbH||7.00491,50.87180
+S|Berufskolleg Gladbeck||6.98255,51.57692
+S|Martin-Luther-King-Schule Marl||7.14517,51.66365
+S|Schule an der Bergmannsglückstraße||7.04199,51.60318
+S|Grundschule am Arkonaplatz||13.40039,52.53684
+S|Gesamtschule Münster-Mitte||7.62015,51.96443
+S|Achtenbeckschule||7.13523,51.60031
+S|Leibniz-Montessori-Gymnasium||6.78581,51.24174
+S|Grimmelshausen-Gymnasium Offenburg||7.94533,48.46764
+S|Scheffel-Gymnasium Bad Säckingen||7.94368,47.55546
+S|Sekretariat und Verwaltung | HPC Schulen Heidelberg||8.67403,49.40567
+S|Städt. Heisenberg-Gymnasium||7.49527,51.55370
+S|Städt. Heisenberg-Gymnasium||7.49527,51.55370
+S|Johannes Kepler Gemeinschaftsschule Magstadt||8.97044,48.74034
+S|Carl-Friedrich-Gauß-Gymnasium||7.11134,51.51518
+S|Hessenwaldschule||8.63011,49.93812
+S|Freie Schule Frankfurt||8.66642,50.09780
+S|Hauptschule Coerde||7.64794,51.99717
+S|Elisabeth von Thüringen-Realschule||6.89884,50.83207
+S|Realschule am Goldberg Sindelfingen||9.01107,48.69938
+S|Gemeinschaftsschule Korb||9.35597,48.84472
+S|Barbara-Zürner-Oberschule Velten (ehem. 1. Oberschule Velten)||13.18197,52.68786
+S|Staatliche Realschule Viechtach||12.88389,49.07381
+S|Pettenkofer-Grundschule||13.47082,52.51890
+S|Königin-Katharina-Stift Gymnasium||9.18555,48.78144
+S|KGS Hage||7.28337,53.60438
+S|Schule am Pegasuseck||13.52885,52.40646
+S|HORIZONTA in den Seeveauen||9.96044,53.30366
+S|Schule am Schloss Berlin||13.29810,52.51610
+S|Pius-Gymnasium Aachen||6.08422,50.75329
+S|Schulwerkstatt e.V.||9.21372,48.59107
+S|Schule Hasselbrook||10.04510,53.56412
+S|Sekundarschule Kreuzau/Nideggen||6.48509,50.74553
+S|Wöhlerschule||8.67429,50.14084
+S|Campe-Gymnasium Holzminden||9.46541,51.83660
+S|Biedensandschule Lampertheim||8.45585,49.59813
+S|Gymnasium Remigianum||6.86729,51.84011
+S|Wilhelm-Niedermayer-Grund- und Mittelschule||13.37844,48.72801
+S|Euregio-Gesamtschule Epe | Standort GHD||7.04028,52.18619
+S|Oberschule Schönau / Siegmar||12.87384,50.82301
+S|Integrierte Gesamtschule Buchholz||9.88818,53.33747
+S|Heinrich-von-Brentano-Schule||8.35949,50.01985
+S|Grünauer Gemeinschaftsschule||13.57603,52.41936
+S|Gymnasium an der Willmsstraße||8.63216,53.05142
+S|Geschwister Scholl Gesamtschule||6.66037,51.44889
+S|Erasmus-Gymnasium Grevenbroich||6.59584,51.08512
+S|Manfred von Ardenne Gymnasium||13.49299,52.54175
+S|Eckener-Gymnasium||13.38071,52.44486
+S|Helen-Keller-Schule, Klinikschule der Stadt Münster||7.59212,51.95874
+S|Gesamtschule Wulfen||7.02851,51.72714
+S|Privatschule und Internat Villa Wewersbusch||7.13257,51.34149
+S|Frauenlob-Gymnasium Mainz||8.26555,50.00873
+S|Sekundarschule Beckum||8.05212,51.75643
+S|Donner + Kern gGmbH - Fachschule u. Berufsfachschule für Sozialwesen||13.48067,52.52429
+S|Gymnasium Petrinum Dorsten||6.96308,51.66504
+S|Grundschule Gaisburg||9.21771,48.78354
+S|Friedrich-Bergius-Schule||13.33314,52.47618
+S|Realschule im Kreuzviertel||7.62029,51.97380
+S|Hohe Landesschule||8.91806,50.14508
+S|Europaschule Stadtteilschule Poppenbüttel||10.07923,53.65922
+S|Regionale Schule "Friedrich-Rohr"||11.56820,53.27585
+S|Anne-Frank-Realschule||6.98262,51.56913
+S|Friedrich-Ebert-Oberschule||13.31941,52.48427
+S|BBS Verden||9.24101,52.95286
+S|Friedrich-Ebert-Oberschule||13.31941,52.48427
+S|Geschwister-Scholl-Gymnasium||7.95297,48.09401
+S|Erich Kästner Schule Hamburg Grund- und Stadtteilschule||10.12017,53.61969
+S|IGS Alexej von Jawlensky Kulturschule||8.19273,50.06839
+S|Arnold-Zweig-Grundschule||13.40079,52.56756
+S|Schickhardt-Gemeinschaftsschule bilingual Stuttgart||9.16109,48.76576
+S|Alexander-Coppel-Gesamtschule Solingen||7.09937,51.17466
+S|Rosa-Parks-Schule||7.13764,51.60907
+S|Loecknitz-Grundschule||13.34336,52.48956
+S|Werner-Heisenberg-Schule||8.42274,49.99109
+S|PRIMUS-Schule Viersen||6.34570,51.24921
+S|Wilhelm-Bölsche-Oberschule||13.61895,52.45109
+S|Friedrich-List-Schule||10.67498,53.88220
+S|Deutzer Gymnasium Schaurtestraße||6.97610,50.93360
+S|Carl-Orff-Gymnasium Unterschleißheim||11.58158,48.26958
+S|Wilhelm-Kaisen-Schule||8.81273,53.05231
+S|Geschwister-Scholl-Realschule||7.48495,51.85595
+S|Freihof-Realschule||9.45243,48.65138
+S|Couven-Gymnasium Aachen||6.07102,50.76360
+S|Staatliche Realschule||10.31058,47.72614
+S|Montessori-Schule Passau||13.43797,48.57069
+S|Gymnasium Mainz-Mombach||8.21543,50.02230
+S|Tiefburgschule||8.68529,49.42880
+S|Produktionsschule Barmbek||10.03896,53.58783
+S|Schweizerhof-Grundschule||13.26572,52.42278
+S|Mittelschule Altenstadt||12.15854,49.70611
+S|Realschule Crange||7.15227,51.54014
+S|Friedrich-Ludwig-Jahn-Oberschule||13.15176,52.10335
+S|DRK-Landesschule Baden-Württemberg gGmbH||8.57655,48.51807
+S|Käthe-Kollwitz-Berufskolleg||7.48349,51.35739
+S|Georg-Zacharias-Schule, 44.Grundschule Pankow||13.47523,52.55216
+S|Gemeinschaftsgrundschule Eckenhagen||7.69230,50.99417
+S|Helene-Lohmann-Schule||7.33964,51.41784
+S|Gem.Grundschule||6.13348,50.81881
+S|Schule "Am Akazienhof"||13.09299,52.55950
+S|Katholische Marienschule Potsdam||13.11526,52.39572
+S|Kreuzschule Coesfeld||7.18013,51.93292
+S|Heinrich-Pattberg-Realschule Moers||6.63525,51.44627
+S|Alexander-S.-Puschkin-Gymnasium-Hennigsdorf||13.20353,52.63566
+S|Städt. Realschule an der Mellinghofer Straße||6.88838,51.44173
+S|Werner-von-Siemens-Schule||7.26749,51.50560
+S|Helene-Lange-Realschule||7.07294,51.44505
+S|Edith-Stein-Schule||7.82829,48.00030
+S|Weibelfeldschule||8.69402,50.00976
+S|Gymnasium Petrinum Brilon||8.55095,51.39305
+S|Gemeinschafthauptschule Drimborn||6.11833,50.76330
+S|Grundschule Moorflagen||9.94441,53.64159
+S|Landrat-Lucas-Gymnasium||7.00181,51.06372
+S|Oberschule Schüttorf||7.21804,52.32282
+S|Heinz-Sielmann-Schule||8.66178,51.96121
+S|Heinz-Sielmann-Schule||8.66178,51.96121
+S|Gymnasium Hochdahl||6.96256,51.21041
+S|Grundschule Wehringhausen||7.45141,51.35119
+S|Städtische Gesamtschule Emmerich am Rhein||6.24418,51.83266
+S|Maria-Sibylla-Merian-Gesamtschule||6.08638,50.82702
+S|Freiherr-vom-Stein-Gymnasium||8.55707,52.20551
+S|Städt. Gymnasium Haan||6.99843,51.19605
+S|Herder-Gymnasium||11.05856,49.71615
+S|Grundschule Starnberg||11.34308,48.00485
+S|Montanus-Realschule||7.06133,51.04812
+S|Kuniberg Berufskolleg||7.21163,51.61808
+S|Gesamtschule Weilerswist||6.84001,50.74972
+S|Zukunftscampus Karlshorst||
+S|Geschwister-Scholl-Gesamtschule||7.52032,51.61054
+S|Joseph-DuMont-Berufskolleg||6.93169,50.96536
+S|Grundschule Harztorwall||10.53939,52.15967
+S|Norbert-Gymnasium Knechtsteden||6.75371,51.07799
+S|Joseph-Haydn-Gymnasium||7.48386,51.85329
+S|Roman-Herzog-Schule in Brilon||8.54850,51.39365
+S|Förderschule Roßheide||7.00168,51.54945
+S|Freie Schule Dreisamtal e.V.||7.95232,47.97145
+S|THEATER Hauptschule Gevelsberg||7.31598,51.32415
+S|Julia-Koppers-Gesamtschule||6.85285,51.83806
+S|Förderschule Duisburg Nord (Standort Dittfeldstraße)||6.73846,51.51831
+S|Gesamtschule Hüllhorst||8.67235,52.27491
+S|Martin-Luther-King-Schule||7.61545,51.99383
+S|Herwig-Blankertz-Berufskolleg||7.20745,51.62156
+S|Wilhelm-Conrad-Röntgen Mittelschule Weilheim in Oberbayern||11.14521,47.83681
+S|Euregio Gesamtschule Rheine||7.44842,52.27954
+S|LWL-Förderschule mit dem Förderschwerpunkt Sehen (LWL-Pauline-Schule Paderborn)||8.76128,51.71385
+S|Richard-Riemerschmid-Berufskolleg||6.95274,50.92748
+S|Paracelsus-Gymnasium Hohenheim||9.21097,48.70545
+S|Berufskolleg Bergheim - Berufskolleg des Rhein-Erft-Kreises in Bergheim - Standort Ketteler Straße||6.64922,50.95251
+S|Wolfgang-Borchert-Gesamtschule||7.18904,51.62437
+S|Gelderland-Schule||6.32055,51.52248
+S|Sekundarschule an der Marienlinde||7.78131,51.98660
+S|Robert-Koch-Realschule Vaihingen||9.10502,48.72315
+S|Luisenrealschule Bielefeld||8.53805,52.02739
+S|Liebfrauenschule Nottuln||7.35748,51.93226
+S|Freie Grundschule Kornwestheim||9.22323,48.87395
+S|Heinrich-Heine-Gymnasium||9.29234,48.71710
+S|Grundschule Ost Landshut||
+S|Regionales Berufliches Bildungszentrum des Landkreises Vorpommern-Rügen||13.03161,54.30846
+S|Staatl. Dante-Gymnasium München; Ausbildungsrichtung: SG||11.54316,48.11505
+S|Sachsenwaldschule||10.24884,53.51467
+S|Comenius-Grundschule||12.50925,50.66939
+S|Maria-Wächtler-Gymnasium||7.01383,51.43655
+S|Schule an der Sieg, Sekundarschule Eitorf||7.45232,50.77373
+S|Maximilian-Kolbe-Gymnasium||6.28167,51.13577
+S|Gymnasium St. Kaspar||8.99725,51.67602
+S|Geschwister-Scholl-Berufskolleg||7.00755,51.03371
