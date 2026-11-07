@@ -8,6 +8,7 @@
   var ML = BASE + 'vendor/'; // MapLibre GL 4.7.1
   var STYLE = 'https://tiles.openfreemap.org/styles/positron';
   var RADIUS_KM = 25;
+  var V = '3'; // bei neuen Grafiken erhöhen
 
   function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -88,7 +89,7 @@
         }, firstSymbol);
         map.addLayer({ id: 'kreise-line', type: 'line', source: 'kreise', paint: { 'line-color': '#ffffff', 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.5, 10, 1.2], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.9, 10, 0.5] } }, firstSymbol);
 
-        Promise.all([img('siegel', BASE + 'img/siegel.png', 3), img('eimer', BASE + 'img/eimer.png', 2)]).then(function () {
+        Promise.all([img('siegel', BASE + 'img/siegel.png?v=' + V, 3), img('eimer', BASE + 'img/eimer.png?v=' + V, 2)]).then(function () {
           map.addSource('reg', { type: 'geojson', data: reg, cluster: true, clusterRadius: 36, clusterMaxZoom: 10 });
           map.addSource('partner', { type: 'geojson', data: partner, cluster: true, clusterRadius: 42, clusterMaxZoom: 10 });
 
