@@ -67,6 +67,8 @@
       function img(name, url) { return map.loadImage(url).then(function (res) { if (!map.hasImage(name)) map.addImage(name, res.data, { pixelRatio: 2 }); }); }
 
       map.on('load', function () {
+        var att = wrap.querySelector('.maplibregl-ctrl-attrib');
+        if (att) att.classList.remove('maplibregl-compact-show');
         var layers = map.getStyle().layers, firstSymbol;
         layers.forEach(function (l) {
           if (l.type === 'background') map.setPaintProperty(l.id, 'background-color', '#fbf5f8');
