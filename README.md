@@ -28,7 +28,7 @@ Mit eigenem Ausschnitt (z. B. Kampagnenseiten): `<div id="ltu-karte" data-center
 | `data/ref/partner_koordinaten.json` | Feste Position je Partnerschule (Schul-ID) |
 | `scripts/build_data.py` | Baut die Dateien in `data/` |
 | `scripts/sync_backend.py` | Liest Schulen und LifeTeacher aus dem Backend |
-| `.github/workflows/abgleich.yml` | Startet den Abgleich stündlich |
+| `.github/workflows/abgleich.yml` | Startet den Abgleich jede Nacht |
 
 ## Quellen
 
@@ -42,7 +42,7 @@ Die Karte setzt keine Cookies. Beim Laden werden Programmcode und Kartendaten vo
 
 ## Abgleich mit dem Backend
 
-Der Workflow `abgleich.yml` läuft stündlich von etwa 6 bis 22 Uhr und lässt sich unter „Actions“ auch von Hand starten („Run workflow“). `scripts/sync_backend.py` liest zwei Endpunkte der Karten-API:
+Der Workflow `abgleich.yml` läuft einmal täglich gegen 3 Uhr nachts und lässt sich unter „Actions“ auch von Hand starten („Run workflow“). `scripts/sync_backend.py` liest zwei Endpunkte der Karten-API:
 
 - `/map/schools`: alle aktiven Schulen, `verified: true` = Partnerschule
 - `/map/teachers`: aktive LifeTeacher je PLZ
