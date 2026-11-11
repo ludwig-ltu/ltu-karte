@@ -1,12 +1,16 @@
-name: Nächtlicher Abgleich
+name: Abgleich mit dem Backend
 
 on:
   schedule:
-    - cron: "17 2 * * *"   # täglich ca. 3:17 Uhr deutscher Zeit
+    - cron: "17 5-21 * * *"   # stündlich von ca. 6:17 bis 22:17 Uhr deutscher Zeit
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: abgleich
+  cancel-in-progress: false
 
 jobs:
   abgleich:
@@ -21,7 +25,6 @@ jobs:
         env:
           LTU_API_URL: ${{ secrets.LTU_API_URL }}
           LTU_API_TOKEN: ${{ secrets.LTU_API_TOKEN }}
-          LTU_SCHOOLS_QUERY: ${{ vars.LTU_SCHOOLS_QUERY }}
         run: python scripts/sync_backend.py
       - name: Kartendaten bauen
         run: python scripts/build_data.py

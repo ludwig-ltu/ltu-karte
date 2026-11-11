@@ -23,11 +23,12 @@ Mit eigenem Ausschnitt (z. B. Kampagnenseiten): `<div id="ltu-karte" data-center
 | `karte.js`, `karte.css` | Die Karte (Hintergrund von OpenFreeMap) |
 | `vendor/` | MapLibre GL 4.7.1, selbst gehostet |
 | `data/schulen.json` | Partnerschulen und registrierte PLZ-Gebiete |
-| `data/kreise.json` | Landkreise mit Anzahl Schulen |
+| `data/kreise.json` | Landkreise mit Anzahl Schulen und LifeTeacher |
 | `data/plz.json` | PLZ-Mittelpunkte für die Suche |
+| `data/ref/partner_koordinaten.json` | Feste Position je Partnerschule (Schul-ID) |
 | `scripts/build_data.py` | Baut die Dateien in `data/` |
-| `scripts/sync_backend.py` | Liest die Schulen nachts aus dem Backend |
-| `.github/workflows/abgleich.yml` | Startet den Abgleich jede Nacht |
+| `scripts/sync_backend.py` | Liest Schulen und LifeTeacher aus dem Backend |
+| `.github/workflows/abgleich.yml` | Startet den Abgleich stündlich |
 
 ## Quellen
 
@@ -39,6 +40,15 @@ Mit eigenem Ausschnitt (z. B. Kampagnenseiten): `<div id="ltu-karte" data-center
 
 Die Karte setzt keine Cookies. Beim Laden werden Programmcode und Kartendaten von GitHub Pages und die Hintergrundkarte von OpenFreeMap abgerufen. Registrierte Schulen erscheinen nur als PLZ-Gebiet ohne Namen; Name und Ort zeigt die Karte nur bei Partnerschulen mit Vertrag.
 
-## Nächtlicher Abgleich
+## Abgleich mit dem Backend
 
-Der Workflow `abgleich.yml` läuft jede Nacht. Sobald die Secrets `LTU_API_URL` und `LTU_API_TOKEN` sowie die Variable `LTU_SCHOOLS_QUERY` hinterlegt sind, liest `scripts/sync_backend.py` die Schulen aus dem Backend. Danach baut `scripts/build_data.py` die Kartendaten neu. Ohne diese Angaben bleibt der letzte Stand online.
+Der Workflow `abgleich.yml` läuft stündlich von etwa 6 bis 22 Uhr und lässt sich unter „Actions“ auch von Hand starten („Run workflow“). `scripts/sync_backend.py` liest zwei Endpunkte der Karten-API:
+
+- `/map/schools`: alle aktiven Schulen, `verified: true` = Partnerschule
+- `/map/teachers`: aktive LifeTeacher je PLZ
+
+Dafür braucht das Repo unter Settings › Secrets and variables › Actions zwei Secrets: `LTU_API_URL` (Basis-URL inklusive `/prod`) und `LTU_API_TOKEN` (wird als `x-api-key` gesendet). Der Token steht nur dort, nie im Code.
+
+Öffentlich im Repo und auf der Karte landen nur Partnerschulen mit Name und Ort, alle anderen Schulen als PLZ-Gebiet ohne Namen und LifeTeacher als Summe je Landkreis. Die Rohdaten bleiben im Zwischenordner `.cache/`, der nicht ins Repo übernommen wird. Liefert das Backend einen Fehler oder deutlich weniger Partnerschulen als bisher, bricht der Abgleich ab und die Karte behält den letzten Stand.
+
+Partnerschulen haben im Backend nur PLZ und Ort. Beim ersten Abgleich übernimmt jede Partnerschule ihre bisherige Position von der Karte (gleicher Name oder einzige Partnerschule in der PLZ), neue Partnerschulen sitzen auf dem PLZ-Mittelpunkt, bei mehreren in einer PLZ leicht versetzt. Eine Position lässt sich in `data/ref/partner_koordinaten.json` von Hand korrigieren und bleibt dann erhalten.
